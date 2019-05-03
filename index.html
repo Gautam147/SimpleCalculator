@@ -1,0 +1,135 @@
+<html>
+<title>My Calculator</title>
+<head>
+<h1 align=center>Welcome To EzCalc</h1>
+
+<script> 
+         //function that display value 
+         function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+           
+         //function that evaluates the digit and return result 
+         function solve() 
+         { 
+             let x = document.getElementById("result").value ;
+             let y = eval(x);
+             document.getElementById("result").value = y ;
+         } 
+           
+         //function that clear the display 
+         function clr() 
+         { 
+			var num;
+             num= document.getElementById("result").value;
+			 var str=num.toString();
+			 var res=str.slice(0,-1);
+			 document.getElementById("result").value=res;
+			 
+			 
+         } 
+		 function aclr()                
+            { 
+                document.getElementById("result").value = "";}
+				
+				            
+      </script> 
+
+
+
+
+</head>
+<body>
+
+<FORM name="Calculator">
+ <table border="4" align=center>  
+  <tr>   
+    <td colspan="2" align="center">My EzCalc<br><br>
+      <input type="text" maxlength="40" size="30" name="Display" id="result">
+    </td>
+  </tr>  
+  <tr>
+    <td> 
+      <table>
+       <tr align="right">
+         <td><input type="button" value="7" name="digit" OnClick="dis('7')"></td>
+         <td><input type="button" value="8" name="digit" OnClick="dis('8')"></td>
+         <td><input type="button" value="9" name="digit" OnClick="dis('9')"></td>
+       </tr>
+       <tr>
+       </tr>
+      </table>
+    </td>
+    <td> 
+      <table>
+         <tr>
+		 <td><input type="button" value="C" onclick="clr()"/></td>
+		 <td><input type="button" value="AC" onclick="aclr()"></td>
+      </table>
+    </td>
+	
+  </tr>
+  <tr>
+    <td> 
+      <table>
+       <tr align="right">
+         <td><input type="button" value="4" name="digit" OnClick="dis('4')"></td>
+         <td><input type="button" value="5" name="digit" OnClick="dis('5')"></td>
+         <td><input type="button" value="6" name="digit" OnClick="dis('6')"></td>
+       </tr>
+       <tr>
+       </tr>
+      </table>
+    </td>
+	<td> 
+      <table>
+         <tr>
+		 <td><input type="button" value="*" OnClick="dis('*')"></td>
+		 <td><input type="button" value="/" OnClick="dis('/')"></td>
+      </table>
+    </td>
+	<tr>
+    <td> 
+      <table border="0">
+       <tr align="right">
+         <td><input type="button" value="1" name="dig" OnClick="dis('1')"></td>
+         <td><input type="button" value="2" name="dig" OnClick="dis('2')"></td>
+         <td><input type="button" value="3" name="dig" OnClick="dis('3')"></td>
+       </tr>
+       <tr>
+       </tr>
+      </table>
+    </td>
+	<td> 
+      <table>
+         <tr>
+		 <td><input type="button" value="+" OnClick="dis('+')" ></td>
+		 <td><input type="button" value="-" OnClick="dis('-')"></td>
+      </table>
+    </td>
+	<tr>
+    <td> 
+      <table>
+       <tr align="right">
+         <td><input type="button" value="%" OnClick="dis('%')"></td>
+         <td><input type="button" value="0" OnClick="dis('0')"></td>
+         <td><input type="button" value="." OnClick="dis('.')"></td>
+       </tr>
+       <tr>
+       </tr>
+      </table>
+    </td>
+	<td> 
+      <table>
+         <tr>
+		 <td><input type="button" value="=" OnClick="solve('')"></td>
+		 <td><input type="button" value="exp" OnClick="dis('**')"></td>
+      </table>
+    </td>
+  </table>
+  
+</FORM>
+
+</body>
+</html>
